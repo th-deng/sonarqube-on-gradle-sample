@@ -144,7 +144,7 @@ val testCoverage by tasks.registering {
 
 sonarqube {
     properties {
-        property("sonar.host.url", if (project.hasProperty("sonarHostUrl")) { project.property("sonarHostUrl")!! } else { "http://127.0.0.1:9000" })
+        property("sonar.host.url", project.findProperty("sonar.host.url") ?: "http://127.0.0.1:9000")
         property("sonar.sourceEncoding", "UTF-8")
         property("sonar.sources", "src/main")
         property("sonar.tests", "src/test")
