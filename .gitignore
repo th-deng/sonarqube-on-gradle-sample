@@ -30,3 +30,6 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### SonarQube files - config, data, logs, .. ###
+/sonarqube/

@@ -1,1 +1,1 @@
-rootProject.name = "jacoco-on-gralde-sample"
+rootProject.name = "sonarqube-on-gralde-sample"
