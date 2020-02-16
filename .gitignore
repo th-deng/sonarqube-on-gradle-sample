@@ -32,4 +32,5 @@ out/
 .vscode/
 
 ### SonarQube files - config, data, logs, .. ###
-/sonarqube/
+/docker/jenkins/
+/docker/sonarqube/

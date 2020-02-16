@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+
+  sonarqube:
+    container_name: sonarqube
+    image: sonarqube:lts
+    ports:
+      - 9000:9000
+#    restart: unless-stopped
+    volumes:
+      - ./sonarqube/conf:/opt/sonarqube/conf
+      - ./sonarqube/extensions:/opt/sonarqube/extensions
+      - ./sonarqube/logs:/opt/sonarqube/logs
+      - ./sonarqube/data:/opt/sonarqube/data
+    networks:
+      - internal
+
+  jenkins:
+    container_name: jenkins
+    image: jenkins/jenkins:lts-jdk11
+    ports:
+      - 8080:8080
+      - 50000:50000
+#    restart: unless-stopped
+    volumes:
+      - ./jenkins:/var/jenkins_home
+    networks:
+      - internal
+
+networks:
+  internal:

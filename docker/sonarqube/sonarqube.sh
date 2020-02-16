@@ -35,12 +35,12 @@ downloadPlugin 'sonar-java-plugin' '6.0.2.20657'
 downloadPlugin 'sonar-jacoco-plugin' '1.0.2.475'
 
 
-# Run sonarqube
-echo "Running sonarqube"
-docker run --rm \
--p 9000:9000 \
--v $CONF_DIR:/opt/sonarqube/conf \
--v $EXTENSION_DIR:/opt/sonarqube/extensions \
--v $LOG_DIR:/opt/sonarqube/logs \
--v $DATA_DIR:/opt/sonarqube/data \
-sonarqube:7.9.2-community
+## Run sonarqube
+#echo "Running sonarqube"
+#docker run --rm \
+#-p 9000:9000 \
+#-v $CONF_DIR:/opt/sonarqube/conf \
+#-v $EXTENSION_DIR:/opt/sonarqube/extensions \
+#-v $LOG_DIR:/opt/sonarqube/logs \
+#-v $DATA_DIR:/opt/sonarqube/data \
+#sonarqube:7.9.2-community
