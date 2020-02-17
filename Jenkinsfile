@@ -3,9 +3,9 @@ import jenkins.model.*
 pipeline {
     agent any
     stages {
-//         stage('SCM') {
-//             git 'https://github.com/foo/bar.git'
-//         }
+        stage('SCM') {
+            git 'https://github.com/th-deng/sonarqube-on-gradle-sample'
+        }
         stage('SonarQube analysis') {
             steps {
                 withSonarQubeEnv('sonarqube') { // Will pick the global server connection you have configured
