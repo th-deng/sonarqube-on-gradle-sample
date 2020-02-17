@@ -4,7 +4,9 @@ pipeline {
     agent any
     stages {
         stage('SCM') {
-            git 'https://github.com/th-deng/sonarqube-on-gradle-sample'
+            steps {
+                git 'https://github.com/th-deng/sonarqube-on-gradle-sample'
+            }
         }
         stage('SonarQube analysis') {
             steps {
